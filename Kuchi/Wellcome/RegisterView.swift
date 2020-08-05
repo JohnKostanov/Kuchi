@@ -12,6 +12,7 @@ struct RegisterView: View {
     @EnvironmentObject var userManager: UserManager
     @ObservedObject var keyboardHandler: KeyboardFollower
     @State var amount: Double = 0
+    @State var quantity = 0.0
     
     init(keyboardHandler: KeyboardFollower) {
         self.keyboardHandler = keyboardHandler
@@ -63,6 +64,8 @@ struct RegisterView: View {
                 }
                 Text("\(amount)")
             }
+            
+            Stepper("Quantity: \(quantity)", value: $quantity, in: 0 ... 10, step: 0.5)
             
             Spacer()
         }
