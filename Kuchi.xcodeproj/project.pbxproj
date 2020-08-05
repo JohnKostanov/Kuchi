@@ -18,6 +18,7 @@
 		52707B2824D5A9860093824B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52707B2724D5A9860093824B /* Assets.xcassets */; };
 		52707B2B24D5A9860093824B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52707B2A24D5A9860093824B /* Preview Assets.xcassets */; };
 		52707B2E24D5A9860093824B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52707B2C24D5A9860093824B /* LaunchScreen.storyboard */; };
+		52B74E4224DA96640030AB2C /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4124DA96640030AB2C /* BorderedViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		52707B2A24D5A9860093824B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52707B2D24D5A9860093824B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52707B2F24D5A9860093824B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B74E4124DA96640030AB2C /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				521F0FFA24D9CA7E00A68739 /* WelcomeBackgroundImage.swift */,
 				521F0FFC24D9CBD700A68739 /* LogoImage.swift */,
 				521F0FFE24D9CC3400A68739 /* WellcomeMessageView.swift */,
+				52B74E4124DA96640030AB2C /* BorderedViewModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				524E0AFA24D5AAC500AE2E26 /* WellcomeView.swift in Sources */,
 				52707B2224D5A9810093824B /* AppDelegate.swift in Sources */,
 				52707B2424D5A9810093824B /* SceneDelegate.swift in Sources */,
+				52B74E4224DA96640030AB2C /* BorderedViewModifier.swift in Sources */,
 				521F100224D9CEC500A68739 /* RegisterView.swift in Sources */,
 				52707B2624D5A9810093824B /* ContentView.swift in Sources */,
 				521F0FFF24D9CC3400A68739 /* WellcomeMessageView.swift in Sources */,
