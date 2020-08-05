@@ -19,6 +19,7 @@
 		52707B2B24D5A9860093824B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52707B2A24D5A9860093824B /* Preview Assets.xcassets */; };
 		52707B2E24D5A9860093824B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52707B2C24D5A9860093824B /* LaunchScreen.storyboard */; };
 		52B74E4224DA96640030AB2C /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4124DA96640030AB2C /* BorderedViewModifier.swift */; };
+		52B74E4524DAA3B50030AB2C /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4424DAA3B50030AB2C /* KeyboardFollower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		52707B2D24D5A9860093824B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52707B2F24D5A9860093824B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B74E4124DA96640030AB2C /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		52B74E4424DAA3B50030AB2C /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		52707B2024D5A9810093824B /* Kuchi */ = {
 			isa = PBXGroup;
 			children = (
+				52B74E4324DAA3940030AB2C /* Utils */,
 				521F100024D9CE9900A68739 /* Wellcome */,
 				521F0FF924D9CA4900A68739 /* Components */,
 				52707B2124D5A9810093824B /* AppDelegate.swift */,
@@ -107,6 +110,14 @@
 				52707B2A24D5A9860093824B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52B74E4324DAA3940030AB2C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52B74E4424DAA3B50030AB2C /* KeyboardFollower.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				521F0FFB24D9CA7E00A68739 /* WelcomeBackgroundImage.swift in Sources */,
 				524E0AFA24D5AAC500AE2E26 /* WellcomeView.swift in Sources */,
 				52707B2224D5A9810093824B /* AppDelegate.swift in Sources */,
+				52B74E4524DAA3B50030AB2C /* KeyboardFollower.swift in Sources */,
 				52707B2424D5A9810093824B /* SceneDelegate.swift in Sources */,
 				52B74E4224DA96640030AB2C /* BorderedViewModifier.swift in Sources */,
 				521F100224D9CEC500A68739 /* RegisterView.swift in Sources */,
