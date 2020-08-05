@@ -24,8 +24,15 @@ struct RegisterView: View {
             WellcomeMessageView()
             TextField("Type your name...", text: $userManager.profile.name)
                 .bordered()
+            HStack {
+                Spacer()
+                Text("\(userManager.profile.name.count)")
+                    .font(.caption)
+                    .foregroundColor(userManager.isUserNameValid() ? .green : .red)
+                    .padding()
+            }
+            .padding(.bottom)
             Button(action: self.registerUser) {
-                
                 HStack {
                     Image(systemName: "checkmark")
                         .resizable()
@@ -36,6 +43,7 @@ struct RegisterView: View {
                 }
             }
             .bordered()
+            .disabled(!userManager.isUserNameValid())
             
             Spacer()
         }
