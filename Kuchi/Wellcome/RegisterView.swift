@@ -25,8 +25,17 @@ struct RegisterView: View {
             TextField("Type your name...", text: $userManager.profile.name)
                 .bordered()
             Button(action: self.registerUser) {
-                Text("ОК")
+                
+                HStack {
+                    Image(systemName: "checkmark")
+                        .resizable()
+                        .frame(width: 16, height: 16, alignment: .center)
+                    Text("ОК")
+                        .font(.body)
+                        .bold()
+                }
             }
+            .bordered()
             
             Spacer()
         }
