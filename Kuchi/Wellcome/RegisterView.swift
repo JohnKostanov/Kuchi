@@ -11,6 +11,7 @@ import SwiftUI
 struct RegisterView: View {
     @EnvironmentObject var userManager: UserManager
     @ObservedObject var keyboardHandler: KeyboardFollower
+    @State var amount: Double = 0
     
     init(keyboardHandler: KeyboardFollower) {
         self.keyboardHandler = keyboardHandler
@@ -53,6 +54,15 @@ struct RegisterView: View {
             }
             .bordered()
             .disabled(!userManager.isUserNameValid())
+            
+            VStack {
+                HStack {
+                    Text("0")
+                    Slider(value: $amount, in: 0.0 ... 10.0, step: 0.5)
+                    Text("10")
+                }
+                Text("\(amount)")
+            }
             
             Spacer()
         }
