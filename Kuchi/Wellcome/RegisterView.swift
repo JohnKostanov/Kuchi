@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var name: String = ""
+    @EnvironmentObject var userManager: UserManager
     @ObservedObject var keyboardHandler: KeyboardFollower
     
     init(keyboardHandler: KeyboardFollower) {
@@ -22,8 +22,11 @@ struct RegisterView: View {
             Spacer()
             
             WellcomeMessageView()
-            TextField("Type your name...", text: $name)
+            TextField("Type your name...", text: $userManager.profile.name)
                 .bordered()
+            Button(action: self.registerUser) {
+                Text("ОК")
+            }
             
             Spacer()
         }
@@ -45,7 +48,16 @@ struct RegisterView: View {
 
 
 struct RegisterView_Previews: PreviewProvider {
+    static let user = UserManager(name: "John")
     static var previews: some View {
         RegisterView(keyboardHandler: KeyboardFollower())
+            .environmentObject(user)
+    }
+}
+
+// MARK: - Event Handlers
+extension RegisterView {
+    func registerUser() {
+        userManager.persistProfile()
     }
 }
