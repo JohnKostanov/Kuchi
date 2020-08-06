@@ -30,12 +30,18 @@ import SwiftUI
 
 struct ChallengeView: View {
   var body: some View {
-    Image("swiftlogo")
-        .resizable()
-        .background(Color.red)
-        .frame(width: 100, height: 50, alignment: .center)
-        .minimumScaleFactor(0.5)
-        .background(Color.yellow)
+    HStack(alignment: .firstTextBaseline) {
+        Text("Welcome to Kuchi").font(.caption)
+//            .layoutPriority(-1)
+//            .background(Color.red)
+//            .frame(width: 100, height: 50, alignment: .center)
+//            .minimumScaleFactor(0.5)
+        Text("Welcome to Kuchi").font(.title)
+//                .layoutPriority(1)
+//                .background(Color.red)
+        Button(action: {}, label: { Text("Ok").font(.body)})
+    }
+//    .background(Color.yellow)
   }
 }
 
