@@ -29,24 +29,61 @@
 import SwiftUI
 
 struct ChallengeView: View {
-  var body: some View {
-    HStack(alignment: .firstTextBaseline) {
-        Text("Welcome to Kuchi").font(.caption)
-//            .layoutPriority(-1)
-//            .background(Color.red)
-//            .frame(width: 100, height: 50, alignment: .center)
-//            .minimumScaleFactor(0.5)
-        Text("Welcome to Kuchi").font(.title)
-//                .layoutPriority(1)
-//                .background(Color.red)
-        Button(action: {}, label: { Text("Ok").font(.body)})
+    let challengeTest: ChallengeTest
+    @State var showAnswers = false
+    
+    
+    var body: some View {
+        
+        VStack {
+            // 2
+            Button(action: {
+              self.showAnswers = !self.showAnswers
+            }) {
+              // 3
+              QuestionView(question: challengeTest.challenge.question)
+                .frame(height: 300)
+            }
+
+            // 4
+            if showAnswers {
+              Divider()
+              // 5
+              ChoicesView(challengeTest: challengeTest)
+                .frame(height: 300)
+                .padding()
+            }
+          }
+
+        //    HStack(alignment: .firstTextBaseline) {
+        //        Text("Welcome to Kuchi").font(.caption)
+        //            .layoutPriority(-1)
+        //            .background(Color.red)
+        //            .frame(width: 100, height: 50, alignment: .center)
+        //            .minimumScaleFactor(0.5)
+        //        Text("Welcome to Kuchi").font(.title)
+        //                .layoutPriority(1)
+        //                .background(Color.red)
+        //        Button(action: {}, label: { Text("Ok").font(.body)})
+        //    }
+        //    .background(Color.yellow)
     }
-//    .background(Color.yellow)
-  }
 }
 
 struct ChallengeView_Previews: PreviewProvider {
-  static var previews: some View {
-    ChallengeView()
-  }
+    
+    static let challengeTest = ChallengeTest(
+      challenge: Challenge(
+        question: "おねがい　します",
+        pronunciation: "Onegai shimasu",
+        answer: "Please"
+      ),
+      answers: ["Thank you", "Hello", "Goodbye"]
+    )
+
+    static var previews: some View {
+      return ChallengeView(challengeTest: challengeTest)
+    }
+
 }
+
