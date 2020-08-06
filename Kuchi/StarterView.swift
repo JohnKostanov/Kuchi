@@ -30,7 +30,7 @@ import SwiftUI
 struct StarterView: View {
   @EnvironmentObject var userViewModel: UserManager
   
-  var body: some View {
+  @ViewBuilder var body: some View {
     Group {
       if self.userViewModel.isRegistered {
         WellcomeView()
