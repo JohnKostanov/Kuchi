@@ -30,6 +30,7 @@
 		52B74E4824DAB7400030AB2C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4724DAB7400030AB2C /* UserManager.swift */; };
 		52B74E4A24DAB7480030AB2C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4924DAB7480030AB2C /* Settings.swift */; };
 		52B74E4C24DAB74E0030AB2C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74E4B24DAB74E0030AB2C /* Profile.swift */; };
+		52EAF12B24DD444200325364 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EAF12A24DD444200325364 /* ScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		52B74E4724DAB7400030AB2C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		52B74E4924DAB7480030AB2C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		52B74E4B24DAB74E0030AB2C /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		52EAF12A24DD444200325364 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				52AE390D24DBF43C00A744D6 /* CongratulationsView.swift */,
 				52AE391024DBF43D00A744D6 /* PracticeView.swift */,
 				52AE390C24DBF43C00A744D6 /* QuestionView.swift */,
+				52EAF12A24DD444200325364 /* ScoreView.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				52707B2224D5A9810093824B /* AppDelegate.swift in Sources */,
 				52B74E4524DAA3B50030AB2C /* KeyboardFollower.swift in Sources */,
 				52707B2424D5A9810093824B /* SceneDelegate.swift in Sources */,
+				52EAF12B24DD444200325364 /* ScoreView.swift in Sources */,
 				52B74E4A24DAB7480030AB2C /* Settings.swift in Sources */,
 				52B74E4224DA96640030AB2C /* BorderedViewModifier.swift in Sources */,
 				52AE391224DBF43D00A744D6 /* QuestionView.swift in Sources */,
