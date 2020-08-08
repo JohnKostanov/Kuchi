@@ -32,33 +32,59 @@ struct ChallengeView: View {
     let challengeTest: ChallengeTest
     @State var showAnswers = false
     @Binding var numberOfAnswered: Int
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     
     
+    @ViewBuilder
     var body: some View {
+        if verticalSizeClass == .compact {
+            VStack {
+                // 2
+                HStack {
+                    Button(action: {
+                        self.showAnswers = !self.showAnswers
+                    }) {
+                        // 3
+                        QuestionView(question: challengeTest.challenge.question)
+                    }
+                    
+                    // 4
+                    if showAnswers {
+                        Divider()
+                        // 5
+                        ChoicesView(challengeTest: challengeTest)
+                        
+                    }
+                }
+                
+                ScoreView(numberOfQuestions: 5, numberOfAnswered: $numberOfAnswered)
+                
+            }
+        } else {
+            VStack {
+                // 2
+                Button(action: {
+                    self.showAnswers = !self.showAnswers
+                }) {
+                    // 3
+                    QuestionView(question: challengeTest.challenge.question)
+                        .frame(height: 300)
+                }
+                
+                ScoreView(numberOfQuestions: 5, numberOfAnswered: $numberOfAnswered)
+                // 4
+                if showAnswers {
+                    Divider()
+                    // 5
+                    ChoicesView(challengeTest: challengeTest)
+                        .frame(height: 300)
+                        .padding()
+                }
+                
+            }
+        }
         
-        VStack {
-            // 2
-            Button(action: {
-                self.showAnswers = !self.showAnswers
-            }) {
-              // 3
-              QuestionView(question: challengeTest.challenge.question)
-                .frame(height: 300)
-            }
-            
-            ScoreView(numberOfQuestions: 5, numberOfAnswered: $numberOfAnswered)
-          
-
-            // 4
-            if showAnswers {
-              Divider()
-              // 5
-              ChoicesView(challengeTest: challengeTest)
-                .frame(height: 300)
-                .padding()
-            }
-          }
-
+        
         //    HStack(alignment: .firstTextBaseline) {
         //        Text("Welcome to Kuchi").font(.caption)
         //            .layoutPriority(-1)
@@ -78,17 +104,17 @@ struct ChallengeView_Previews: PreviewProvider {
     @State static var numberOfAnswered: Int = 0
     
     static let challengeTest = ChallengeTest(
-      challenge: Challenge(
-        question: "おねがい　します",
-        pronunciation: "Onegai shimasu",
-        answer: "Please"
-      ),
-      answers: ["Thank you", "Hello", "Goodbye"]
+        challenge: Challenge(
+            question: "おねがい　します",
+            pronunciation: "Onegai shimasu",
+            answer: "Please"
+        ),
+        answers: ["Thank you", "Hello", "Goodbye"]
     )
-
+    
     static var previews: some View {
         return ChallengeView(challengeTest: challengeTest, numberOfAnswered: $numberOfAnswered)
     }
-
+    
 }
 
