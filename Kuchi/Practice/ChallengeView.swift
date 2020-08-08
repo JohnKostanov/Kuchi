@@ -31,6 +31,7 @@ import SwiftUI
 struct ChallengeView: View {
     let challengeTest: ChallengeTest
     @State var showAnswers = false
+    @Binding var numberOfAnswered: Int
     
     
     var body: some View {
@@ -38,14 +39,15 @@ struct ChallengeView: View {
         VStack {
             // 2
             Button(action: {
-              self.showAnswers = !self.showAnswers
+                self.showAnswers = !self.showAnswers
             }) {
               // 3
               QuestionView(question: challengeTest.challenge.question)
                 .frame(height: 300)
             }
             
-            ScoreView()
+            ScoreView(numberOfQuestions: 5, numberOfAnswered: $numberOfAnswered)
+          
 
             // 4
             if showAnswers {
@@ -73,6 +75,7 @@ struct ChallengeView: View {
 }
 
 struct ChallengeView_Previews: PreviewProvider {
+    @State static var numberOfAnswered: Int = 0
     
     static let challengeTest = ChallengeTest(
       challenge: Challenge(
@@ -84,7 +87,7 @@ struct ChallengeView_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-      return ChallengeView(challengeTest: challengeTest)
+        return ChallengeView(challengeTest: challengeTest, numberOfAnswered: $numberOfAnswered)
     }
 
 }

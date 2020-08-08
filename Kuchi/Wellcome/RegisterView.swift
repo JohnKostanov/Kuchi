@@ -20,10 +20,10 @@ struct RegisterView: View {
     }
     
     var body: some View {
-        
+
         VStack {
             Spacer()
-            
+
             WellcomeMessageView()
             TextField("Type your name...", text: $userManager.profile.name)
                 .bordered()
@@ -56,7 +56,7 @@ struct RegisterView: View {
             }
             .bordered()
             .disabled(!userManager.isUserNameValid())
-            
+
             VStack {
                 HStack {
                     Text("0")
@@ -65,7 +65,7 @@ struct RegisterView: View {
                 }
                 Text("\(amount)")
             }
-            
+
             Stepper("Quantity: \(quantity)", value: $quantity, in: 0 ... 10, step: 0.5)
             SecureField.init("Password", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -104,7 +104,7 @@ extension RegisterView {
         } else {
             userManager.clear()
         }
-        
+
         userManager.persistSettings()
 //        userManager.isRegistered //???
     }

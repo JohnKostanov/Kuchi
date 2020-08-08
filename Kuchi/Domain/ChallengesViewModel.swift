@@ -68,6 +68,9 @@ class ChallengesViewModel: ObservableObject {
   var correctAnswers: [Challenge] = []
   var wrongAnswers: [Challenge] = []
   @Published var currentChallenge: ChallengeTest?
+    var numberOfAnswered: Int {
+        return correctAnswers.count
+    }
   
   init() {
     generateRandomChallenge()
