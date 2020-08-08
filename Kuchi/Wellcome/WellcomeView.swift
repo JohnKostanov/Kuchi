@@ -21,6 +21,7 @@ struct WellcomeView: View {
           userName: $userManager.profile.name,
           numberOfAnswerd: .constant(challengesViewModel.numberOfAnswered)
         )
+            .environment(\.questionsPerSession, challengesViewModel.numberOfQuestions)
       } else {
         // 3
         ZStack {
