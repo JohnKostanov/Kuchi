@@ -16,12 +16,7 @@ struct WellcomeView: View {
     @ViewBuilder var body: some View {
       if showPractice {
         // 2
-        PracticeView(
-          challengeTest: $challengesViewModel.currentChallenge,
-          userName: $userManager.profile.name,
-          numberOfAnswerd: .constant(challengesViewModel.numberOfAnswered)
-        )
-            .environment(\.questionsPerSession, challengesViewModel.numberOfQuestions)
+        HomeView()
       } else {
         // 3
         ZStack {
