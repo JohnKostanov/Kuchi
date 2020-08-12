@@ -11,6 +11,7 @@
 		521F0FFD24D9CBD700A68739 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F0FFC24D9CBD700A68739 /* LogoImage.swift */; };
 		521F0FFF24D9CC3400A68739 /* WellcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F0FFE24D9CC3400A68739 /* WellcomeMessageView.swift */; };
 		521F100224D9CEC500A68739 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F100124D9CEC500A68739 /* RegisterView.swift */; };
+		5222528124E40F9800656493 /* FlashDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222528024E40F9800656493 /* FlashDeck.swift */; };
 		524E0AFA24D5AAC500AE2E26 /* WellcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E0AF924D5AAC500AE2E26 /* WellcomeView.swift */; };
 		526EC89524DFE39100CCCCC3 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EC89424DFE39100CCCCC3 /* LearnView.swift */; };
 		526EC89724DFE3FA00CCCCC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EC89624DFE3FA00CCCCC3 /* HomeView.swift */; };
@@ -41,6 +42,7 @@
 		521F0FFC24D9CBD700A68739 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		521F0FFE24D9CC3400A68739 /* WellcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeMessageView.swift; sourceTree = "<group>"; };
 		521F100124D9CEC500A68739 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5222528024E40F9800656493 /* FlashDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashDeck.swift; sourceTree = "<group>"; };
 		524E0AF924D5AAC500AE2E26 /* WellcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeView.swift; sourceTree = "<group>"; };
 		526EC89424DFE39100CCCCC3 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		526EC89624DFE3FA00CCCCC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				526EC89424DFE39100CCCCC3 /* LearnView.swift */,
 				526EC89824DFEA9A00CCCCC3 /* FlashCard.swift */,
+				5222528024E40F9800656493 /* FlashDeck.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				52B74E4C24DAB74E0030AB2C /* Profile.swift in Sources */,
 				52AE391B24DBF55000A744D6 /* ChallengesViewModel.swift in Sources */,
 				52AE391424DBF43D00A744D6 /* ChallengeView.swift in Sources */,
+				5222528124E40F9800656493 /* FlashDeck.swift in Sources */,
 				52707B2224D5A9810093824B /* AppDelegate.swift in Sources */,
 				52B74E4524DAA3B50030AB2C /* KeyboardFollower.swift in Sources */,
 				52707B2424D5A9810093824B /* SceneDelegate.swift in Sources */,
