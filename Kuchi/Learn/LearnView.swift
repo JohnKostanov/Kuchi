@@ -9,8 +9,22 @@
 import SwiftUI
 
 struct LearnView: View {
+    @ObservedObject var learningStore =
+        LearningStore(deck: ChallengesViewModel().challenges)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Text("Swipe left if you remembered"
+                + "\nSwipe right if you didn’t")
+                .font(.headline)
+            DeckView()
+            Spacer()
+            Text("Remembered \(self.learningStore.score)"
+                + "/\(self.learningStore.deck.cards.count)")
+            
+        }
+        
     }
 }
 
