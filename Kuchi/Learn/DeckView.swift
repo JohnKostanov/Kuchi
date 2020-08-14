@@ -40,7 +40,12 @@ struct DeckView: View {
        }
 
        func createCardView(for card: FlashCard) -> CardView {
-         let view = CardView(card)
+        let view = CardView(card, onDrag: {
+            card, direction in
+            if direction == .left {
+                self.onMemorized()
+            }
+        })
 
          return view
        }
@@ -50,4 +55,9 @@ struct DeckView_Previews: PreviewProvider {
     static var previews: some View {
         DeckView(onMemorized: {}, deck: FlashDeck(from: ChallengesViewModel().challenges))
     }
+}
+
+enum DiscardedDirection {
+    case left
+    case right
 }
